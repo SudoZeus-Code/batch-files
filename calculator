@@ -1,0 +1,91 @@
+REM 4/2/2020 sudozeus
+REM Calculator Program
+echo OFF
+
+goto :main
+
+
+:main
+  cls
+  echo.
+  echo -------------------------
+  echo    C A L C U L A T O R
+  echo -------------------------
+  echo (1) Addition
+  echo (2) Subtraction
+  echo (3) Multiplication
+  echo (4) Division
+  echo (5) Quit
+  echo.
+
+set /p choice=Enter choice:
+
+if %choice%==1 goto addition
+if %choice%==2 goto subtraction
+if %choice%==3 goto multiplication
+if %choice%==4 goto division
+if %choice%==5 goto quit
+
+:addition
+  cls
+  echo.
+  echo -------------------------
+  echo    C A L C U L A T O R
+  echo    working with ^+       
+  echo -------------------------
+  set /p num1=Enter first number:
+  set /p num2=Enter second number:
+  set /A product=%num1%+%num2%
+  echo %num1% ^+ %num2% ^= %product%
+  pause
+  goto main
+
+
+
+
+:subtraction
+  cls
+  echo.
+  echo -------------------------
+  echo    C A L C U L A T O R
+  echo    working with ^-       
+  echo -------------------------
+  set /p num1=Enter first number:
+  set /p num2=Enter second number:
+  set /A product=%num1%-%num2%
+  echo %num1% ^- %num2% ^= %product%
+  pause
+  goto main
+
+:multiplication
+  cls
+  echo.
+  echo -------------------------
+  echo    C A L C U L A T O R
+  echo    working with ^*       
+  echo -------------------------
+  set /p num1=Enter first number:
+  set /p num2=Enter second number:
+  set /A product=%num1%*%num2%
+  echo %num1% ^* %num2% ^= %product%
+  pause
+  goto main
+
+:division
+  cls
+  echo.
+  echo -------------------------
+  echo    C A L C U L A T O R
+  echo    working with ^/       
+  echo -------------------------
+  set /p num1=Enter first number:
+  set /p num2=Enter second number:
+  set /A product=%num1%/%num2%
+  echo %num1% ^/ %num2% ^= %product%
+  pause
+  goto main
+
+
+
+
+:quit
